@@ -1,4 +1,7 @@
 <?php
+
+use Psr\Container\ContainerInterface;
+
 namespace Home;
 
 /**
@@ -6,6 +9,35 @@ namespace Home;
  *
  * @author Seif
  */
-class Container {
-    //put your code here
+final class Container implements ContainerInterface {
+
+    /**
+     *
+     * @var ServicesStore 
+     */
+    private $servicesStore;
+
+    public function __construct(ServicesStore $serviceStore) {
+        $this->servicesStore = $serviceStore;
+    }
+
+    /**
+     * 
+     * @param integer $id
+     * @throws \ServiceNotFoundException
+     */
+    public function get($id) {
+        return $this->servicesStore->offsetGet($id);
+    }
+
+    /**
+     * 
+     * @param integer $id
+     * @return mixed
+     */
+    public function has($id) {
+        return $this->servicesStore->offsetExists($id);
+    }
+
+//put your code here
 }

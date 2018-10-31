@@ -6,8 +6,12 @@
             <file>file:/C:/xampp/htdocs/bc/lib/Home/BaseController.php</file>
             <file>file:/C:/xampp/htdocs/bc/lib/Home/DbConnection.php</file>
             <file>file:/C:/xampp/htdocs/bc/autoload.php</file>
+            <file>file:/C:/xampp/htdocs/bc/src/Bc/Controllers/IndexController.php</file>
             <file>file:/C:/xampp/htdocs/bc/lib/Home/FrontController.php</file>
             <file>file:/C:/xampp/htdocs/bc/lib/Home/Application.php</file>
+            <file>file:/C:/xampp/htdocs/bc/src/Bc/Controllers/AdresseController.php</file>
+            <file>file:/C:/xampp/htdocs/bc/app/Config/services.php</file>
+            <file>file:/C:/xampp/htdocs/bc/src/Bc/Controllers/ContactController.php</file>
             <file>file:/C:/xampp/htdocs/bc/public/index.php</file>
         </group>
     </open-files>

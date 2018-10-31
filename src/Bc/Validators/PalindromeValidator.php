@@ -1,10 +1,16 @@
 <?php
+
 namespace Bc\Validators;
+
 /**
  * 
  *
  * @author Seif
  */
-class PalindromeValidator {
-    
+class PalindromeValidator implements InputValidatorInterface {
+
+    public function isValid($value) {
+        
+    }
+
 }

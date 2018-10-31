@@ -1,10 +1,12 @@
 <?php
 namespace Bc\Controllers;
+
+use Home\BaseController;
 /**
  * 
  *
  * @author Seif
  */
-class IndexController {
+class IndexController extends BaseController{
     
 }

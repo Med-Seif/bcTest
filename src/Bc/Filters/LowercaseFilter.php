@@ -1,10 +1,16 @@
 <?php
+
 namespace Bc\Filters;
+
 /**
  * 
  *
  * @author Seif
  */
-class LowercaseFilter {
-    
+class LowercaseFilter implements InputFilterInterface {
+
+    public function filter($value) {
+        
+    }
+
 }

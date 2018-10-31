@@ -5,6 +5,6 @@ namespace Bc\Model\Repository;
  *
  * @author Seif
  */
-class AdresseRepository {
+class AdresseRepository extends AbstractRepository {
     
 }
