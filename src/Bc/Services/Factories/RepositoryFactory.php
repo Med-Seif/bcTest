@@ -1,5 +1,7 @@
 <?php
 
+namespace Bc\Services\Factories;
+
 /**
  * Description of RepositoryFactory
  *
@@ -8,8 +10,6 @@
 class RepositoryFactory implements ServiceFactoryInterface {
 
     public function create($container, $serviceID = null) {
-        
     }
 
-//put your code here
 }

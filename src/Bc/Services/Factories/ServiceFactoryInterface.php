@@ -1,5 +1,7 @@
 <?php
 
+namespace Bc\Services\Factories;
+
 /**
  *
  * @author Seif

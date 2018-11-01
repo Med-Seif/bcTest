@@ -1,5 +1,7 @@
 <?php
 
+namespace Bc\Exceptions;
+
 /**
  * Description of ServiceNotFoundException
  *

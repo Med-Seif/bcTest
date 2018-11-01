@@ -1,8 +1,8 @@
 <?php
 
-use Psr\Container\ContainerInterface;
-
 namespace Home;
+
+use Psr\Container\ContainerInterface;
 
 /**
  * Description of Container

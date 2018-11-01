@@ -23,6 +23,11 @@ class ServicesStore implements \ArrayAccess {
         if (!$this->offsetExists($offset)) {
             throw new \ServiceNotFoundException();
         }
+        if ($this->services[$offset] instanceof \Bc\Services\Factories\ServiceFactoryInterface) {
+            $factoryInstance = new $offset();
+            $factoryInstance->create($this, $offset);
+            $this->offsetSet($factoryInstance, $offset);
+        }
         return $this->services[$offset];
     }
 

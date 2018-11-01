@@ -2,8 +2,8 @@
 
 return [
     'hostname' => 'localhost',
-    'dbname' => 'bc',
-    'login' => 'root',
+    'database' => 'bc',
+    'user' => 'root',
     'password' => '',
     'charset' => 'utf8',
 ];
