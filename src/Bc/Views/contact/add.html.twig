@@ -1,0 +1,12 @@
+{% extends 'layout.html.twig' %}
+{% block title %}
+    Ajouter un contact
+{% endblock %} 
+{% block content %}
+    <form action="/bcTest/public/contact/add?userID={{ userID }}" method="post">
+        <label>Nom</label><input type="text" />
+        <label>Prénom</label><input type="text" />
+        <label>Email</label><input type="text" />
+        <input type="submit" value="Soumettre" />
+    </form>
+{% endblock %}

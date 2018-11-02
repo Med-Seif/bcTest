@@ -1,8 +1,8 @@
 <?php
 
-namespace Bc\Model\Repository;
+namespace Bc\Models\Repository;
 
-use Home\DbConnection;
+use Home\DbMysqliAdapter;
 
 /**
  * Description of AbstractRepository
@@ -13,21 +13,21 @@ abstract class AbstractRepository {
 
     /**
      *
-     * @var DbConnection
+     * @var DbMysqliAdapter
      */
     protected $dbConnection;
 
     /**
      * 
-     * @param DbConnection $dbConnection
+     * @param DbMysqliAdapter $dbConnection
      */
-    public function setDbConnection(DbConnection $dbConnection) {
+    public function setDbConnection(DbMysqliAdapter $dbConnection) {
         $this->dbConnection = $dbConnection;
     }
 
     /**
      * 
-     * @return DbConnection
+     * @return DbMysqliAdapter
      */
     public function getDbConnection() {
         return $this->dbConnection;

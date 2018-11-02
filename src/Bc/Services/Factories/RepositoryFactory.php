@@ -9,7 +9,13 @@ namespace Bc\Services\Factories;
  */
 class RepositoryFactory implements ServiceFactoryInterface {
 
-    public function create($container, $serviceID = null) {
+    public function create(\ArrayAccess $serviceStore, $serviceID = null) {
+        if (!class_exists($serviceID)) {
+            throw new \Bc\Exceptions\InvalidClassNameException();
+        }
+        $instance = new $serviceID();
+        $instance->setDbConnection($serviceStore['db_connection']);
+        return $instance;
     }
 
 }

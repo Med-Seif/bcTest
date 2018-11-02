@@ -9,35 +9,39 @@ use Psr\Container\ContainerInterface;
  *
  * @author Seif
  */
-final class Container implements ContainerInterface {
+final class Container implements ContainerInterface
+{
 
     /**
      *
-     * @var ServicesStore 
+     * @var ServicesStore
      */
     private $servicesStore;
 
-    public function __construct(ServicesStore $serviceStore) {
+    public function __construct(ServicesStore $serviceStore)
+    {
         $this->servicesStore = $serviceStore;
     }
 
     /**
-     * 
+     *
      * @param integer $id
      * @throws \ServiceNotFoundException
      */
-    public function get($id) {
+    public function get($id)
+    {
         return $this->servicesStore->offsetGet($id);
     }
 
     /**
-     * 
+     *
      * @param integer $id
      * @return mixed
      */
-    public function has($id) {
+    public function has($id)
+    {
         return $this->servicesStore->offsetExists($id);
     }
 
-//put your code here
+    //put your code here
 }

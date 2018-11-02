@@ -2,6 +2,11 @@
 
 namespace Home;
 
+use Exception;
+use Twig\Extension\DebugExtension;
+use Twig_Environment;
+use Twig_Loader_Filesystem;
+
 /**
  * Description of Application
  *
@@ -10,6 +15,8 @@ namespace Home;
 class Application {
 
     const CONFIG_PATH = __DIR__ . '/../../app/Config';
+    const TWIG_TEMPLATE_PATH = __DIR__ . '/../../src/Bc/Views/';
+    const PUBLIC_WEB_ROOT = '/public';
 
     /**
      *
@@ -18,12 +25,16 @@ class Application {
     protected $serviceStore;
 
     public function run() {
-        $this->initServices();
-//        $this->initDbConnection();
-        $this->initTemplateEngine();
-
-        $response = $this->processRequest($this->getRequestPath());
-        $this->printTemplate($response);
+        try {
+            $this->initServices();
+            $this->initDbConnection();
+            $this->initTemplateEngine();
+            $this->printTemplate(
+                    $this->processRequest()
+            );
+        } catch (Exception $e) {
+            echo get_class($e);
+        }
     }
 
     public function initServices() {
@@ -37,38 +48,38 @@ class Application {
 
     public function initDbConnection() {
         $configDB = require_once self::CONFIG_PATH . '/db.php';
-        $dbConnection = new mysqli(
-                $configDB['hostname'], $configDB['user'], $configDB['password'], $configDB['database']
-        );
-        $this->serviceStore['db_connection'] = $dbConnection;
-    }
-
-    public function initConfig() {
-        
+        $this->serviceStore['db_connection'] = DbMysqliAdapter::createConnection($configDB);
     }
 
     public function initTemplateEngine() {
-        $loader = new \Twig_Loader_Filesystem(__DIR__ . '/../../src/Bc/Views/');
-        $twig = new \Twig_Environment($loader);
+        $loader = new Twig_Loader_Filesystem(self::TWIG_TEMPLATE_PATH);
+        $twig = new Twig_Environment($loader, ['debug' => true]);
+        $twig->addExtension(new DebugExtension());
         $this->serviceStore['twig'] = $twig;
     }
 
+    public function getRequestParams() {
+        return array_merge(
+                filter_input_array(INPUT_GET) ?? [], filter_input_array(INPUT_POST) ?? []
+        );
+    }
+
     public function processRequest() {
-        $fc = new FrontController($this->getRequestPath(), new Container($this->serviceStore));
+        $fc = new FrontController(
+                $this->getRequestPath(), $this->getRequestParams(), new Container($this->serviceStore)
+        );
         return $fc->dispatch();
     }
 
     public function getRequestPath() {
-        $publicFolderName = '/public';
         $requestUri = filter_input(INPUT_SERVER, 'REQUEST_URI');
         $requestPath = parse_url($requestUri, PHP_URL_PATH);
-        $pos = strpos($requestPath, $publicFolderName);
-        $appRequest = substr($requestPath, $pos + strlen($publicFolderName) + 1);
+        $pos = strpos($requestPath, self::PUBLIC_WEB_ROOT);
+        $appRequest = substr($requestPath, $pos + strlen(self::PUBLIC_WEB_ROOT) + 1);
         return explode('/', $appRequest);
     }
-    
-    public function printTemplate($response)
-    {
+
+    public function printTemplate($response) {
         echo $response;
     }
 

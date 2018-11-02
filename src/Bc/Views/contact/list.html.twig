@@ -1,0 +1,25 @@
+{% extends 'layout.html.twig' %}
+{% block title %}
+    Liste de contacts
+{% endblock %} 
+{% block content %}
+    <a>Ajouter</a>
+    <table>
+        <thead>
+            <tr>
+                <th>Nom</th>
+                <th>Prénom</th>
+                <th>Email</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        {% for item in contacts %}
+            <tr>
+                <td>{{ item.nom }}</td>
+                <td>{{ item.prenom }}</td>
+                <td>{{ item.email }}</td>
+                <td><a>Éditer</a></td>
+            </tr>
+        {% endfor %}
+    </table>
+{% endblock %}

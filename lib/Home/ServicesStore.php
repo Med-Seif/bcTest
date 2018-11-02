@@ -11,12 +11,12 @@ class ServicesStore implements \ArrayAccess {
 
     /**
      *
-     * @var type 
+     * @var type
      */
     protected $services = [];
 
     public function offsetExists($offset) {
-        return isset($this->services[$offset]);
+        return array_key_exists($offset, $this->services);
     }
 
     public function offsetGet($offset) {
@@ -24,9 +24,12 @@ class ServicesStore implements \ArrayAccess {
             throw new \ServiceNotFoundException();
         }
         if ($this->services[$offset] instanceof \Bc\Services\Factories\ServiceFactoryInterface) {
-            $factoryInstance = new $offset();
-            $factoryInstance->create($this, $offset);
-            $this->offsetSet($factoryInstance, $offset);
+            $factoryClassName = $this->services[$offset];
+            $factoryInstance = new $factoryClassName();
+            $this->offsetSet(
+                $offset, 
+                $factoryInstance->create($this, $offset)
+            );
         }
         return $this->services[$offset];
     }
@@ -36,7 +39,9 @@ class ServicesStore implements \ArrayAccess {
     }
 
     public function offsetUnset($offset) {
-        unset($this->services[$offset]);
+        if (isset($this->services[$offset])) {
+            unset($this->services[$offset]);
+        }
     }
 
 }

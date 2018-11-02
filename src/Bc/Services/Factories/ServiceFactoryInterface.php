@@ -2,11 +2,13 @@
 
 namespace Bc\Services\Factories;
 
+use Home\ServicesStore;
+
 /**
  *
  * @author Seif
  */
 interface ServiceFactoryInterface {
 
-    public function create($container, $serviceID = null);
+    public function create(\ArrayAccess $serviceStore, $serviceID = null);
 }

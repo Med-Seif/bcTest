@@ -1,12 +1,13 @@
 <?php
 namespace Bc\Controllers;
 
-use Home\BaseController;
+use Home\AbstractBaseController;
 /**
  * 
  *
  * @author Seif
  */
-class AdresseController extends BaseController{
-    
+class AdresseController extends AbstractBaseController{
+    public function listAction(){}
+    public function editAction(){}
 }

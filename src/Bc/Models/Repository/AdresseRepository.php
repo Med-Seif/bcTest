@@ -1,5 +1,5 @@
 <?php
-namespace Bc\Model\Repository;
+namespace Bc\Models\Repository;
 /**
  * 
  *

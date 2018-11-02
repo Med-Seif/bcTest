@@ -1,6 +1,6 @@
 <?php
 
-namespace Bc\Model\Repository;
+namespace Bc\Models\Repository;
 
 /**
  * 
@@ -8,5 +8,10 @@ namespace Bc\Model\Repository;
  * @author Seif
  */
 class UserRepository extends AbstractRepository {
-    
+
+    public function findRow($id) {
+        $query = 'SELECT login FROM users WHERE id = ?';
+        return $this->getDbConnection()->executeQuery($query, [$id], [\Home\DbMysqliAdapter::MYSQLI_PARAM_TYPE_INT]);
+    }
+
 }

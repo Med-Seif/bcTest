@@ -2,19 +2,19 @@
 
 namespace Bc\Controllers;
 
-use Home\BaseController;
+use Home\AbstractBaseController;
 
 /**
  * 
  *
  * @author Seif
  */
-class IndexController extends BaseController {
+class IndexController extends AbstractBaseController {
 
-    public function indexAction($params) {
-        $vars = ['a' => 'Hello'];
-        $this->get('Bc\Model\Repository\UserRepository');
-        return $this->render('index/index.twig', $vars);
+    public function indexAction() {
+        $vars = ['msg' => 'Hello'];
+        $this->get(\Bc\Models\Repository\UserRepository::class);
+        return $this->render('index/index.html.twig', $vars);
     }
 
 }

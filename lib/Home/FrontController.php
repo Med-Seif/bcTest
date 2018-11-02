@@ -14,11 +14,10 @@ class FrontController {
     protected $params;
     protected $container;
 
-    public function __construct($requestPath, $container) {
-
+    public function __construct(array $requestPath, array $requestParams = [], Container $container) {
         $this->setControllerName($requestPath[0]);
         $this->setActionName($requestPath[1]);
-        $this->setParams($requestPath[2]);
+        $this->setParams($requestParams);
         $this->container = $container;
     }
 
@@ -54,21 +53,29 @@ class FrontController {
 
     public function createConroller() {
         $className = $this->getControllerName();
+        if (!class_exists($className)) {
+            throw new \Bc\Exceptions\ControllerNotFoundException();
+        }
         $controllerInstance = new $className;
+        if (!method_exists($controllerInstance, $this->getActionName())) {
+            throw new \Bc\Exceptions\MethodActionNotFoundException();
+        }
         $controllerInstance->setContainer($this->container);
+        $controllerInstance->setParams($this->getParams());
         return $controllerInstance;
     }
 
     public function dispatch() {
-
-        return call_user_func_array(
+        $response = call_user_func_array(
                 [
             $this->createConroller(),
             $this->getActionName()
-                ], [
-            $this->getParams()
-                ]
+                ], []
         );
+        if (!$response) {
+            throw new \Bc\Exceptions\MissingControllerActionResponse();
+        }
+        return $response;
     }
 
 }
