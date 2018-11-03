@@ -7,6 +7,6 @@ namespace Bc\Exceptions;
  *
  * @author Seif
  */
-class ServiceNotFoundException extends InvalidArgumentException {
+class ServiceNotFoundException extends \Exception {
     
 }

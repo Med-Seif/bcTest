@@ -3,7 +3,7 @@
     Liste de contacts
 {% endblock %} 
 {% block content %}
-    <a>Ajouter</a>
+    <a href="{{ base_url }}/contact/add?userID={{ user_id }}">Ajouter</a>
     <table>
         <thead>
             <tr>
@@ -18,7 +18,7 @@
                 <td>{{ item.nom }}</td>
                 <td>{{ item.prenom }}</td>
                 <td>{{ item.email }}</td>
-                <td><a>Éditer</a></td>
+                <td><a href="{{ base_url }}/contact/edit?id={{ item.id }}">Éditer</a></td>
             </tr>
         {% endfor %}
     </table>

@@ -2,7 +2,7 @@
 
 namespace Bc\Models\Repository;
 
-use Home\DbMysqliAdapter;
+use Home\PdoMysqlAdapter;
 
 /**
  * Description of AbstractRepository
@@ -13,21 +13,21 @@ abstract class AbstractRepository {
 
     /**
      *
-     * @var DbMysqliAdapter
+     * @var PdoMysqlAdapter
      */
     protected $dbConnection;
 
     /**
      * 
-     * @param DbMysqliAdapter $dbConnection
+     * @param PdoMysqlAdapter $dbConnection
      */
-    public function setDbConnection(DbMysqliAdapter $dbConnection) {
+    public function setDbConnection(PdoMysqlAdapter $dbConnection) {
         $this->dbConnection = $dbConnection;
     }
 
     /**
      * 
-     * @return DbMysqliAdapter
+     * @return PdoMysqlAdapter
      */
     public function getDbConnection() {
         return $this->dbConnection;

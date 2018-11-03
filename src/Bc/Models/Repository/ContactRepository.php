@@ -1,22 +1,27 @@
 <?php
 
-namespace Bc\Models\Repository;
+    namespace Bc\Models\Repository;
 
-/**
- * 
- *
- * @author Seif
- */
-class ContactRepository extends AbstractRepository {
+    /**
+     *
+     *
+     * @author Seif
+     */
+    class ContactRepository extends AbstractRepository
+    {
 
-    public function find($params) {
-        $query = 'SELECT nom, prenom, email FROM contacts WHERE users_id = ?';
-        return $this->getDbConnection()->executeQuery($query, $params, [\Home\DbMysqliAdapter::MYSQLI_PARAM_TYPE_INT]);
+        public function find($params)
+        {
+            $query = 'SELECT id, nom, prenom, email FROM contacts WHERE users_id = ?';
+            return $this->getDbConnection()->executeQuery($query, $params,
+                [\PDO::PARAM_INT]);
+
+        }
+
+        public function insert($params)
+        {
+            $query = 'INSERT INTO contacts (nom, prenom, email, users_id) VALUES (?, ?, ?, ?)';
+            return $this->getDbConnection()->executeUpdate($query, $params);
+        }
 
     }
-    public function insert($params){
-        $query = 'INSERT INTO contacts (nom, prenom, email, users_id) VALUES (?, ?, ?, ?)';
-        return $this->getDbConnection()->executeQuery($query, $params);
-    }
-
-}
