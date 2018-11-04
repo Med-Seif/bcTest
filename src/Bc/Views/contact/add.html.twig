@@ -4,9 +4,9 @@
 {% endblock %} 
 {% block content %}
     <form action="{{ base_url }}/contact/add?userID={{ userID }}" method="post" name="action_add" id ="action_add">
-        <label>Nom</label><input name="nom" type="text" />
-        <label>Prénom</label><input name="prenom" type="text" />
-        <label>Email</label><input name="email" type="text" />
+        <label>Nom</label><input name="nom" type="text" value="{{ post.nom }}"/>
+        <label>Prénom</label><input name="prenom" type="text" value="{{ post.prenom }}"/>
+        <label>Email</label><input name="email" type="text" value="{{ post.email }}"/>
         <input type="submit" value="Soumettre" />
     </form>
 {% endblock %}

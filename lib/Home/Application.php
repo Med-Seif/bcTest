@@ -89,6 +89,8 @@
             $twig = new Twig_Environment($loader, ['debug' => true]);
             $twig->addExtension(new DebugExtension());
             $twig->addGlobal('base_url', $this->request->getBaseUrl());
+            $twig->addGlobal('post', \filter_input_array(INPUT_POST));
+            $twig->addGlobal('get', \filter_input_array(INPUT_GET));
             $this->serviceStore['twig'] = $twig;
         }
 

@@ -1,12 +1,15 @@
 <?php
 
-namespace Bc\Validators;
+    namespace Bc\Validators;
 
-/**
- *
- * @author Seif
- */
-interface InputValidatorInterface {
+    /**
+     *
+     * @author Seif
+     */
+    interface InputValidatorInterface
+    {
 
-    public function isValid($value);
-}
+        public function isValid($value);
+
+        public function getErrorMessage();
+    }

@@ -1,16 +1,18 @@
 <?php
 
-namespace Bc\Filters;
+    namespace Bc\Filters;
 
-/**
- * 
- *
- * @author Seif
- */
-class UpperCaseFilter implements InputFilterInterface {
+    /**
+     *
+     *
+     * @author Seif
+     */
+    class UpperCaseFilter implements InputFilterInterface
+    {
 
-    public function filter($value) {
-        
+        public function filter($value)
+        {
+            return strtoupper($value);
+        }
+
     }
-
-}

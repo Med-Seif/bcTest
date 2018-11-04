@@ -49,6 +49,9 @@
 
         public function executeQuery($query, $params = [], $types = [])
         {
+            if (!is_array($params)) {
+                $params = [$params];
+            }
             return $this->execute($query, $params, $types)->fetchAll(\PDO::FETCH_ASSOC);
         }
 

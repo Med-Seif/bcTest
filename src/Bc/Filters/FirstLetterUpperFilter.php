@@ -1,16 +1,18 @@
 <?php
 
-namespace Bc\Filters;
+    namespace Bc\Filters;
 
-/**
- * 
- *
- * @author Seif
- */
-class FirstLetterUpperFilter implements InputFilterInterface {
+    /**
+     *
+     *
+     * @author Seif
+     */
+    class FirstLetterUpperFilter implements InputFilterInterface
+    {
 
-    public function filter($value) {
-        
+        public function filter($value)
+        {
+            return ucfirst(strtolower($value));
+        }
+
     }
-
-}

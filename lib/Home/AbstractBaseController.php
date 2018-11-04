@@ -37,7 +37,7 @@
         public function getParam($paramName)
         {
             if (!$this->hasParam($paramName)) {
-                throw new MissingRequestedParam();
+                throw new MissingRequestedParam($paramName);
             }
             return $this->params[$paramName];
         }
@@ -64,7 +64,7 @@
         {
             $host = $_SERVER['HTTP_HOST'] ?? '';
             $proto = (isset($_SERVER['HTTPS']) && $_SERVER['HTTPS'] !== "off") ? 'https' : 'http';
-            $port = (isset($_SERVER['SERVER_PORT']) ? $_SERVER['SERVER_PORT'] : 80);
+            $port = $_SERVER['SERVER_PORT'] ?? 80;
             $uri = $proto . '://' . $host;
             if ((('http' == $proto) && (80 != $port)) || (('https' == $proto) && (443 != $port))) {
                 // ne pas ajouter le port si il existe déjà
