@@ -3,10 +3,17 @@
     Ajouter un contact
 {% endblock %} 
 {% block content %}
-    <form action="{{ base_url }}/contact/add?userID={{ userID }}" method="post" name="action_add" id ="action_add">
+    <form action="{{ base_url }}/contact/add?userID={{ userID }}" method="post" name="action_add" id="action_add">
+        {% if formErrors %}
+            <ul>
+                {% for error in formErrors %}
+                    <li>{{ error }}</li>
+                {% endfor %}
+            </ul>
+        {% endif %}
         <label>Nom</label><input name="nom" type="text" value="{{ post.nom }}"/>
         <label>Prénom</label><input name="prenom" type="text" value="{{ post.prenom }}"/>
         <label>Email</label><input name="email" type="text" value="{{ post.email }}"/>
-        <input type="submit" value="Soumettre" />
+        <input type="submit" value="Soumettre"/>
     </form>
 {% endblock %}

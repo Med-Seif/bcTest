@@ -2,13 +2,9 @@
 
     namespace Bc\Controllers;
 
-    use Bc\Filters\FirstLetterUpperFilter;
-    use Bc\Filters\LowercaseFilter;
+    use Bc\Forms\ContactForm;
     use Bc\Models\Repository\ContactRepository;
-    use Bc\Validators\PalindromeValidator;
     use Home\AbstractBaseController;
-    use Home\Input;
-    use Home\InputCollection;
 
     /**
      *
@@ -32,7 +28,6 @@
 
         public function addAction()
         {
-
             $userID = $this->getParam('userID');
             if (!$this->get(\Bc\Models\Repository\UserRepository::class)->userExists($userID)) {
                 throw new \Bc\Exceptions\MissingObjectException();
@@ -41,87 +36,65 @@
                 return $this->render('contact/add.html.twig', ['userID' => $userID]);
             }
             // un submit a été envoyé
-            // nom
-            $inputNom = (new Input('nom'))
-                ->setValue($this->getParam('nom'))
-                ->addFilter(new FirstLetterUpperFilter())
-                ->addValidator(new PalindromeValidator());
-
-            // prénom
-            $inputPrenom = (new Input('prenom'))
-                ->setValue($this->getParam('prenom'))
-                ->addFilter(new FirstLetterUpperFilter());
-            // email
-            $inputEmail = (new Input('email'))
-                ->setValue($this->getParam('email'))
-                ->addFilter(new LowercaseFilter());
             // wrapper le tout dans un objet (équivalent à un objet de formulaire)
-            $collection = new InputCollection();
-            $collection->addInputs(
-                [
-                    $inputNom,
-                    $inputPrenom,
-                    $inputEmail
-                ]
-            );
-            if ($collection->isValid()) {
+            $form = new ContactForm();
+            $form->setValue('nom', $this->getParam('nom'));
+            $form->setValue('prenom', $this->getParam('prenom'));
+            $form->setValue('email', $this->getParam('email'));
+            if ($form->isValid()) {
                 $this->get(ContactRepository::class)->insert([
-                    $inputNom->getValue(),
-                    $inputPrenom->getValue(),
-                    $inputEmail->getValue(),
+                    $form->getValue('nom'),
+                    $form->getValue('prenom'),
+                    $form->getValue('email'),
                     $userID
                 ]);
                 $this->redirect('/contact/list?userID=' . $userID);
             }
-            var_dump($collection->getErrors());
-            return $this->render('contact/add.html.twig', ['userID' => $userID]);
+            // Validation échouée
+            return $this->render('contact/add.html.twig',
+                [
+                    'userID' => $userID,
+                    'formErrors' => $form->getErrorMassages()
+                ]
+            );
         }
 
 
         public function editAction()
         {
             $id = $this->getParam('id');
-            if (!$this->get(ContactRepository::class)->contactExists($id)) {
+            if (!$contactRow = $this->get(ContactRepository::class)->findRow($id)) {
                 throw new \Bc\Exceptions\MissingObjectException();
             }
             if (!$this->hasParam('nom')) {
-                return $this->render('contact/edit.html.twig', ['$id' => $id]);
+                return $this->render('contact/edit.html.twig', [
+                    'id' => $id,
+                    'nom' => $contactRow['nom'],
+                    'prenom' => $contactRow['prenom'],
+                    'email' => $contactRow['email'],
+                ]);
             }
             // un submit a été envoyé
-            // nom
-            $inputNom = (new Input('nom'))
-                ->setValue($this->getParam('nom'))
-                ->addFilter(new FirstLetterUpperFilter())
-                ->addValidator(new PalindromeValidator());
-
-            // prénom
-            $inputPrenom = (new Input('prenom'))
-                ->setValue($this->getParam('prenom'))
-                ->addFilter(new FirstLetterUpperFilter());
-            // email
-            $inputEmail = (new Input('email'))
-                ->setValue($this->getParam('email'))
-                ->addFilter(new LowercaseFilter());
-            // wrapper le tout dans un objet (équivalent à un objet de formulaire)
-            $collection = new InputCollection();
-            $collection->addInputs(
-                [
-                    $inputNom,
-                    $inputPrenom,
-                    $inputEmail
-                ]
-            );
-            if ($collection->isValid()) {
+            $form = new ContactForm();
+            $form->setValue('nom', $this->getParam('nom'));
+            $form->setValue('prenom', $this->getParam('prenom'));
+            $form->setValue('email', $this->getParam('email'));
+            if ($form->isValid()) {
                 $this->get(ContactRepository::class)->update([
-                    $inputNom->getValue(),
-                    $inputPrenom->getValue(),
-                    $inputEmail->getValue(),
+                    $form->getValue('nom'),
+                    $form->getValue('prenom'),
+                    $form->getValue('email'),
                     $id
                 ]);
-                $this->redirect('/contact/list?userID=' . $userID);
+                $this->redirect('/contact/list?userID=' . $contactRow['users_id']);
             }
-            var_dump($collection->getErrors());
-            return $this->render('contact/add.html.twig', ['userID' => $userID]);
+            // Validation échouée
+            return $this->render('contact/edit.html.twig',
+                [
+                    'id' => $contactRow['id'],
+                    'formErrors' => $form->getErrorMassages()
+                ]
+            );
 
         }
 

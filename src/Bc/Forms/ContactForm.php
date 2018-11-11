@@ -8,6 +8,7 @@
 
     namespace Bc\Forms;
 
+    use Bc\Validators\NotEmptyValidator;
     use Home\Input;
     use Home\InputCollection;
     use Bc\Filters\FirstLetterUpperFilter;
@@ -19,17 +20,17 @@
         public function __construct()
         {
             $inputNom = (new Input('nom'))
-//                ->setValue($this->getParam('nom'))
-                ->addFilter(new FirstLetterUpperFilter())
-                ->addValidator(new PalindromeValidator());
+                ->addValidator(new NotEmptyValidator())
+                ->addValidator(new PalindromeValidator())
+                ->addFilter(new FirstLetterUpperFilter());
 
             // prénom
             $inputPrenom = (new Input('prenom'))
-//                ->setValue($this->getParam('prenom'))
+                ->addValidator(new NotEmptyValidator())
                 ->addFilter(new FirstLetterUpperFilter());
             // email
             $inputEmail = (new Input('email'))
-//                ->setValue($this->getParam('email'))
+                ->addValidator(new NotEmptyValidator())
                 ->addFilter(new LowercaseFilter());
             // wrapper le tout dans un objet (équivalent à un objet de formulaire)
             $this->addInputs(

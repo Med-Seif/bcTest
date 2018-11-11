@@ -3,10 +3,20 @@
     Éditer un contact
 {% endblock %}
 {% block content %}
-    <form action="{{ base_url }}/contact/edit?id={{ id }}" method="post" name="action_edit" id ="action_edit">
-        <label>Nom</label><input name="nom" type="text" value="{{ post.nom }}"/>
-        <label>Prénom</label><input name="prenom" type="text" value="{{ post.prenom }}"/>
-        <label>Email</label><input name="email" type="text" value="{{ post.email }}"/>
-        <input type="submit" value="Soumettre" />
+    <form action="{{ base_url }}/contact/edit?id={{ id }}" method="post" name="action_edit" id="action_edit">
+        {% if formErrors %}
+            <ul>
+                {% for error in formErrors %}
+                    <li>{{ error }}</li>
+                {% endfor %}
+            </ul>
+        {% endif %}
+        <label>Nom</label><input name="nom" type="text"
+                                 value="{% if post.nom is defined %} {{ post.nom }} {% else %} {{ nom }}{% endif %}"/>
+        <label>Prénom</label><input name="prenom" type="text"
+                                    value="{% if post.prenom is defined %} {{ post.prenom }} {% else %} {{ prenom }}{% endif %}"/>
+        <label>Email</label><input name="email" type="text"
+                                   value="{% if post.email is defined %}{{ post.email }}{% else %}{{ email }}{% endif %}"/>
+        <input type="submit" value="Soumettre"/>
     </form>
 {% endblock %}

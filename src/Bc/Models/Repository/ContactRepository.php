@@ -11,11 +11,13 @@
     {
         public function findRow($id)
         {
-            $query = 'SELECT id, nom, prenom, email FROM contacts WHERE id = ?';
-            return $this->getDbConnection()->executeQuery(
-                $query,
-                [$id],
-                [\PDO::PARAM_INT]
+            $query = 'SELECT id, nom, prenom, email, users_id FROM contacts WHERE id = ?';
+            return array_shift(
+                $this->getDbConnection()->executeQuery(
+                    $query,
+                    [$id],
+                    [\PDO::PARAM_INT]
+                )
             );
         }
 

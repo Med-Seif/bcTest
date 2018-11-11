@@ -13,12 +13,7 @@
 
         public function isValid($value)
         {
-            $reverse = strrev($value);
-
-            if ($value == $reverse) {
-                return false;
-            }
-            return true;
+            return strrev($value) != $value;
         }
 
         public function getErrorMessage()

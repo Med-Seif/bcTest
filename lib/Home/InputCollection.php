@@ -9,7 +9,7 @@
     namespace Home;
 
 
-    use http\Exception\InvalidArgumentException;
+    use Bc\Exceptions\FormInputNotFoundException;
 
     class InputCollection
     {
@@ -29,14 +29,22 @@
             }
         }
 
+        public function getInput($inputName)
+        {
+            if (!array_key_exists($inputName, $this->inputs)) {
+                throw new FormInputNotFoundException();
+            }
+            return $this->inputs[$inputName];
+        }
+
         public function isValid()
         {
             foreach ($this->inputs as $input) {
                 if (!$input->isValid()) {
                     $this->addError($input->getName(), $input->getErrorMessages());
                 }
-                return count($this->errors) == 0;
             }
+            return count($this->errors) == 0;
         }
 
         public function getErrors()
@@ -48,5 +56,33 @@
         public function addError($inputName, $error)
         {
             $this->errors[$inputName] = $error;
+        }
+
+        public function setValue($inputName, $value)
+        {
+            $this->getInput($inputName)->setValue($value);
+        }
+
+        public function getValue($inputName)
+        {
+            return $this->getInput($inputName)->getValue();
+        }
+
+        public function getErrorMassages()
+        {
+            $errorMessages = [];
+            foreach ($this->getErrors() as $input => $errors) {
+                $errorMessages[] = $input . ' : ' . implode(' | ', $errors);
+            }
+            return $errorMessages;
+        }
+
+        public function getValues()
+        {
+            $values = [];
+            foreach ($this->inputs as $input) {
+                $values [$input->getName()] = $input->getValue();
+            }
+            return $values;
         }
     }
