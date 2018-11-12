@@ -3,13 +3,13 @@
   <component name="ChangeListManager">
     <list default="true" id="10e878f8-761f-4cfa-aa1a-412f77222ef4" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/Home/InputCollection.php" beforeDir="false" afterPath="$PROJECT_DIR$/lib/Home/InputCollection.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Bc/Controllers/AdresseController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Bc/Controllers/AdresseController.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Bc/Controllers/ContactController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Bc/Controllers/ContactController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Bc/Forms/ContactForm.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Bc/Forms/ContactForm.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Bc/Controllers/UserController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Bc/Controllers/UserController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Bc/Models/Repository/AdresseRepository.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Bc/Models/Repository/AdresseRepository.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Bc/Models/Repository/ContactRepository.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Bc/Models/Repository/ContactRepository.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Bc/Validators/PalindromeValidator.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Bc/Validators/PalindromeValidator.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Bc/Views/contact/add.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/src/Bc/Views/contact/add.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Bc/Views/contact/edit.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/src/Bc/Views/contact/edit.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Bc/Models/Repository/UserRepository.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Bc/Models/Repository/UserRepository.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Bc/Views/contact/list.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/src/Bc/Views/contact/list.html.twig" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -38,31 +38,31 @@
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
         <counts>
-          <entry key="php" value="72" />
-          <entry key="twig" value="9" />
+          <entry key="php" value="94" />
+          <entry key="twig" value="15" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
-          <entry key="PHP" value="72" />
-          <entry key="Twig" value="9" />
+          <entry key="PHP" value="94" />
+          <entry key="Twig" value="15" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
-          <entry key="php" value="6609" />
-          <entry key="twig" value="296" />
+          <entry key="php" value="7782" />
+          <entry key="twig" value="550" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="PHP" value="6609" />
-          <entry key="Twig" value="296" />
+          <entry key="PHP" value="7782" />
+          <entry key="Twig" value="550" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.php.new.class">
         <counts>
-          <entry key="PHP Class.type" value="7" />
+          <entry key="PHP Class.type" value="11" />
           <entry key="PHP Interface.type" value="1" />
         </counts>
       </usages-collector>
@@ -73,11 +73,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Bc/Controllers/ContactController.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="162">
-              <caret line="69" selection-start-line="69" selection-end-line="69" />
+            <state relative-caret-position="207">
+              <caret line="53" column="57" lean-forward="true" selection-start-line="53" selection-start-column="12" selection-end-line="53" selection-end-column="57" />
               <folding>
                 <element signature="e#42#67#0#PHP" expanded="true" />
               </folding>
@@ -86,61 +86,64 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Bc/Forms/ContactForm.php">
+        <entry file="file://$PROJECT_DIR$/src/Bc/Controllers/AdresseController.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="180">
-              <caret line="17" column="40" lean-forward="true" selection-start-line="17" selection-start-column="40" selection-end-line="17" selection-end-column="40" />
+            <state relative-caret-position="255">
+              <caret line="17" column="54" lean-forward="true" selection-start-line="17" selection-start-column="11" selection-end-line="17" selection-end-column="54" />
               <folding>
-                <element signature="e#141#177#0#PHP" expanded="true" />
+                <element signature="e#42#67#0#PHP" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/lib/Home/InputCollection.php">
+        <entry file="file://$PROJECT_DIR$/src/Bc/Views/adresse/edit.html.twig">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="507">
-              <caret line="81" column="25" selection-start-line="81" selection-start-column="25" selection-end-line="81" selection-end-column="25" />
+            <state relative-caret-position="30">
+              <caret line="2" column="22" selection-start-line="2" selection-start-column="22" selection-end-line="2" selection-end-column="22" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/lib/Home/Input.php">
+        <entry file="file://$PROJECT_DIR$/src/Bc/Controllers/UserController.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-165">
-              <caret line="14" column="10" selection-start-line="14" selection-start-column="10" selection-end-line="14" selection-end-column="10" />
+            <state relative-caret-position="447">
+              <caret line="31" column="64" selection-start-line="31" selection-start-column="64" selection-end-line="31" selection-end-column="64" />
               <folding>
-                <element signature="e#138#174#0#PHP" expanded="true" />
+                <element signature="e#34#61#0#PHP" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Bc/Models/Repository/ContactRepository.php">
+        <entry file="file://$PROJECT_DIR$/src/Bc/Models/Repository/UserRepository.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-45">
-              <caret line="9" column="10" selection-start-line="9" selection-start-column="10" selection-end-line="9" selection-end-column="10" />
+            <state relative-caret-position="330">
+              <caret line="22" column="14" lean-forward="true" selection-start-line="22" selection-start-column="14" selection-end-line="22" selection-end-column="14" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/Bc/Controllers/ApiController.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="225">
+              <caret line="20" column="64" selection-start-line="20" selection-start-column="64" selection-end-line="20" selection-end-column="64" />
+              <folding>
+                <element signature="e#148#181#0#PHP" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Bc/Views/contact/add.html.twig">
+        <entry file="file://$PROJECT_DIR$/lib/Home/FrontController.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="270">
-              <caret line="18" column="14" lean-forward="true" selection-start-line="18" selection-start-column="14" selection-end-line="18" selection-end-column="14" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Bc/Views/contact/edit.html.twig">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="315">
-              <caret line="21" column="14" lean-forward="true" selection-start-line="21" selection-start-column="14" selection-end-line="21" selection-end-column="14" />
+            <state relative-caret-position="575">
+              <caret line="78" column="34" lean-forward="true" selection-start-line="78" selection-start-column="34" selection-end-line="78" selection-end-column="34" />
             </state>
           </provider>
         </entry>
@@ -160,12 +163,10 @@
       <list>
         <option value="$PROJECT_DIR$/lib/Home/FrontController.php" />
         <option value="$PROJECT_DIR$/lib/Home/DbMysqliAdapter.php" />
-        <option value="$PROJECT_DIR$/src/Bc/Models/Repository/UserRepository.php" />
         <option value="$PROJECT_DIR$/src/Bc/Exceptions/DatabaseErrorException.php" />
         <option value="$PROJECT_DIR$/lib/Home/Request.php" />
         <option value="$PROJECT_DIR$/src/Bc/Exceptions/ServiceNotFoundException.php" />
         <option value="$PROJECT_DIR$/lib/Home/ServicesStore.php" />
-        <option value="$PROJECT_DIR$/src/Bc/Views/contact/list.html.twig" />
         <option value="$PROJECT_DIR$/lib/Home/InputInterface.php" />
         <option value="$PROJECT_DIR$/src/Bc/Filters/UpperCaseFilter.php" />
         <option value="$PROJECT_DIR$/src/Bc/Filters/LowercaseFilter.php" />
@@ -180,10 +181,23 @@
         <option value="$PROJECT_DIR$/src/Bc/Validators/PalindromeValidator.php" />
         <option value="$PROJECT_DIR$/src/Bc/Views/contact/add.html.twig" />
         <option value="$PROJECT_DIR$/src/Bc/Forms/ContactForm.php" />
-        <option value="$PROJECT_DIR$/src/Bc/Models/Repository/ContactRepository.php" />
         <option value="$PROJECT_DIR$/lib/Home/InputCollection.php" />
         <option value="$PROJECT_DIR$/src/Bc/Views/contact/edit.html.twig" />
         <option value="$PROJECT_DIR$/src/Bc/Controllers/ContactController.php" />
+        <option value="$PROJECT_DIR$/src/Bc/Models/Repository/AbstractRepository.php" />
+        <option value="$PROJECT_DIR$/src/Bc/Models/Repository/ContactRepository.php" />
+        <option value="$PROJECT_DIR$/src/Bc/Models/Repository/AdresseRepository.php" />
+        <option value="$PROJECT_DIR$/src/Bc/Views/contact/list.html.twig" />
+        <option value="$PROJECT_DIR$/src/Bc/Forms/AdresseForm.php" />
+        <option value="$PROJECT_DIR$/src/Bc/Views/adresse/edit.html.twig" />
+        <option value="$PROJECT_DIR$/src/Bc/Views/adresse/list.html.twig" />
+        <option value="$PROJECT_DIR$/src/Bc/Controllers/AdresseController.php" />
+        <option value="$PROJECT_DIR$/src/Bc/Forms/UserLoginForm.php" />
+        <option value="$PROJECT_DIR$/src/Bc/Views/user/login.html.twig" />
+        <option value="$PROJECT_DIR$/src/Bc/Controllers/UserController.php" />
+        <option value="$PROJECT_DIR$/src/Bc/Models/Repository/UserRepository.php" />
+        <option value="$PROJECT_DIR$/src/Bc/Validators/EmailValidator.php" />
+        <option value="$PROJECT_DIR$/src/Bc/Controllers/ApiController.php" />
       </list>
     </option>
   </component>
@@ -202,7 +216,7 @@
       <path value="$PROJECT_DIR$/vendor/symfony/polyfill-mbstring" />
     </include_path>
   </component>
-  <component name="ProjectFrameBounds" extendedState="6">
+  <component name="ProjectFrameBounds" extendedState="7">
     <option name="x" value="-10" />
     <option name="width" value="980" />
     <option name="height" value="1040" />
@@ -291,6 +305,22 @@
             <path>
               <item name="BcTest" type="b2602c69:ProjectViewProjectNode" />
               <item name="BcTest" type="462c0819:PsiDirectoryNode" />
+              <item name="bin" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="BcTest" type="b2602c69:ProjectViewProjectNode" />
+              <item name="BcTest" type="462c0819:PsiDirectoryNode" />
+              <item name="lib" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="BcTest" type="b2602c69:ProjectViewProjectNode" />
+              <item name="BcTest" type="462c0819:PsiDirectoryNode" />
+              <item name="lib" type="462c0819:PsiDirectoryNode" />
+              <item name="Home" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="BcTest" type="b2602c69:ProjectViewProjectNode" />
+              <item name="BcTest" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -311,6 +341,35 @@
               <item name="BcTest" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="Bc" type="462c0819:PsiDirectoryNode" />
+              <item name="Forms" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="BcTest" type="b2602c69:ProjectViewProjectNode" />
+              <item name="BcTest" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="Bc" type="462c0819:PsiDirectoryNode" />
+              <item name="Models" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="BcTest" type="b2602c69:ProjectViewProjectNode" />
+              <item name="BcTest" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="Bc" type="462c0819:PsiDirectoryNode" />
+              <item name="Models" type="462c0819:PsiDirectoryNode" />
+              <item name="Repository" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="BcTest" type="b2602c69:ProjectViewProjectNode" />
+              <item name="BcTest" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="Bc" type="462c0819:PsiDirectoryNode" />
+              <item name="Validators" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="BcTest" type="b2602c69:ProjectViewProjectNode" />
+              <item name="BcTest" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="Bc" type="462c0819:PsiDirectoryNode" />
               <item name="Views" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -319,7 +378,23 @@
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="Bc" type="462c0819:PsiDirectoryNode" />
               <item name="Views" type="462c0819:PsiDirectoryNode" />
+              <item name="adresse" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="BcTest" type="b2602c69:ProjectViewProjectNode" />
+              <item name="BcTest" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="Bc" type="462c0819:PsiDirectoryNode" />
+              <item name="Views" type="462c0819:PsiDirectoryNode" />
               <item name="contact" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="BcTest" type="b2602c69:ProjectViewProjectNode" />
+              <item name="BcTest" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="Bc" type="462c0819:PsiDirectoryNode" />
+              <item name="Views" type="462c0819:PsiDirectoryNode" />
+              <item name="index" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -332,6 +407,13 @@
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="last_opened_file_path" value="D:/www/actip" />
     <property name="settings.editor.selected.configurable" value="preferences.keymap" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\xampp\htdocs\BcTest\src\Bc\Views\user" />
+      <recent name="C:\xampp\htdocs\BcTest\src\Bc\Views\adresse" />
+      <recent name="C:\xampp\htdocs\BcTest\src\Bc\Forms" />
+    </key>
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -360,12 +442,12 @@
       <workItem from="1541204435704" duration="14273000" />
       <workItem from="1541250498872" duration="2768000" />
       <workItem from="1541283275505" duration="13241000" />
-      <workItem from="1541969429697" duration="8636000" />
+      <workItem from="1541969429697" duration="15544000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="47436000" />
+    <option name="totallyTimeSpent" value="54344000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
@@ -415,31 +497,11 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Bc/Controllers/AdresseController.php">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Bc/Views/contact/list.html.twig">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="300">
-          <caret line="20" column="70" selection-start-line="20" selection-start-column="70" selection-end-line="20" selection-end-column="70" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/lib/Home/InputInterface.php" />
-    <entry file="file://$PROJECT_DIR$/src/Bc/Models/Repository/AdresseRepository.php">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/Bc/Filters/LowercaseFilter.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="210">
           <caret line="14" column="38" selection-start-line="14" selection-start-column="38" selection-end-line="14" selection-end-column="38" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Bc/Filters/UpperCaseFilter.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="270">
-          <caret line="18" lean-forward="true" selection-start-line="18" selection-end-line="18" />
         </state>
       </provider>
     </entry>
@@ -464,13 +526,6 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/lib/Home/DbAdapterInterface.php">
       <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/lib/Home/FrontController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="161">
-          <caret line="66" column="13" lean-forward="true" selection-start-line="66" selection-start-column="13" selection-end-line="66" selection-end-column="13" />
-        </state>
-      </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/lib/Home/ServicesStore.php">
       <provider selected="true" editor-type-id="text-editor">
@@ -500,24 +555,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Bc/Models/Repository/AbstractRepository.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="30">
-          <caret line="2" selection-start-line="2" selection-end-line="2" selection-end-column="31" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/lib/Home/PdoMysqlAdapter.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="780">
           <caret line="52" column="36" selection-start-line="52" selection-start-column="36" selection-end-line="52" selection-end-column="36" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Bc/Models/Repository/UserRepository.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="165">
-          <caret line="11" column="11" selection-start-line="11" selection-start-column="11" selection-end-line="11" selection-end-column="11" />
         </state>
       </provider>
     </entry>
@@ -527,9 +568,6 @@
           <caret line="11" column="55" selection-start-line="11" selection-start-column="55" selection-end-line="11" selection-end-column="55" />
         </state>
       </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Bc/Controllers/UserController.php">
-      <provider selected="true" editor-type-id="text-editor" />
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Bc/Validators/InputValidatorInterface.php">
       <provider selected="true" editor-type-id="text-editor">
@@ -545,17 +583,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Bc/Validators/NotEmptyValidator.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="22" column="39" selection-start-line="22" selection-start-column="39" selection-end-line="22" selection-end-column="39" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/Bc/Views/contact/add.html.twig">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="270">
-          <caret line="18" column="14" lean-forward="true" selection-start-line="18" selection-start-column="14" selection-end-line="18" selection-end-column="14" />
+          <caret line="18" column="14" selection-start-line="18" selection-start-column="14" selection-end-line="18" selection-end-column="14" />
         </state>
       </provider>
     </entry>
@@ -576,36 +607,176 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/Bc/Views/contact/edit.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="315">
+          <caret line="21" column="14" selection-start-line="21" selection-start-column="14" selection-end-line="21" selection-end-column="14" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Bc/Controllers/IndexController.php">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Bc/Models/Repository/AbstractRepository.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="495">
+          <caret line="33" column="5" selection-start-line="33" selection-start-column="5" selection-end-line="33" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Bc/Models/Repository/AdresseRepository.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="225">
+          <caret line="15" column="42" lean-forward="true" selection-start-line="15" selection-start-column="42" selection-end-line="15" selection-end-column="42" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Bc/Views/contact/list.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="330">
+          <caret line="22" column="64" lean-forward="true" selection-start-line="22" selection-start-column="64" selection-end-line="22" selection-end-column="64" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Bc/Models/Repository/ContactRepository.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="177">
+          <caret line="17" column="26" lean-forward="true" selection-start-line="17" selection-start-column="26" selection-end-line="17" selection-end-column="26" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Bc/Filters/UpperCaseFilter.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="135">
+          <caret line="9" column="10" selection-start-line="9" selection-start-column="10" selection-end-line="9" selection-end-column="10" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Bc/Views/adresse/list.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="75">
+          <caret line="5" selection-start-line="5" selection-end-line="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Bc/Views/index/index.html.twig">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/Bc/Forms/ContactForm.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="180">
-          <caret line="17" column="40" lean-forward="true" selection-start-line="17" selection-start-column="40" selection-end-line="17" selection-end-column="40" />
+        <state relative-caret-position="390">
+          <caret line="31" column="22" lean-forward="true" selection-start-line="19" selection-start-column="8" selection-end-line="42" selection-end-column="9" />
           <folding>
             <element signature="e#141#177#0#PHP" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Bc/Views/contact/edit.html.twig">
+    <entry file="file://$PROJECT_DIR$/src/Bc/Forms/AdresseForm.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="315">
-          <caret line="21" column="14" lean-forward="true" selection-start-line="21" selection-start-column="14" selection-end-line="21" selection-end-column="14" />
+        <state relative-caret-position="90">
+          <caret line="11" selection-start-line="11" selection-end-line="14" selection-end-column="29" />
+          <folding>
+            <element signature="e#142#173#0#PHP" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Bc/Models/Repository/ContactRepository.php">
+    <entry file="file://$PROJECT_DIR$/src/Bc/Forms/UserLoginForm.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-45">
-          <caret line="9" column="10" selection-start-line="9" selection-start-column="10" selection-end-line="9" selection-end-column="10" />
+        <state relative-caret-position="390">
+          <caret line="31" column="16" selection-start-line="31" selection-start-column="16" selection-end-line="31" selection-end-column="16" />
+          <folding>
+            <element signature="e#142#167#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Bc/Views/user/login.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="105">
+          <caret line="7" column="23" selection-start-line="7" selection-start-column="23" selection-end-line="7" selection-end-column="23" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Bc/Controllers/ContactController.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="162">
-          <caret line="69" selection-start-line="69" selection-end-line="69" />
+        <state relative-caret-position="207">
+          <caret line="53" column="57" lean-forward="true" selection-start-line="53" selection-start-column="12" selection-end-line="53" selection-end-column="57" />
           <folding>
             <element signature="e#42#67#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Bc/Controllers/UserController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="447">
+          <caret line="31" column="64" selection-start-line="31" selection-start-column="64" selection-end-line="31" selection-end-column="64" />
+          <folding>
+            <element signature="e#34#61#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Bc/Models/Repository/UserRepository.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="330">
+          <caret line="22" column="14" lean-forward="true" selection-start-line="22" selection-start-column="14" selection-end-line="22" selection-end-column="14" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Bc/Validators/EmailValidator.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="255">
+          <caret line="22" column="39" selection-start-line="22" selection-start-column="39" selection-end-line="22" selection-end-column="39" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$APPLICATION_HOME_DIR$/plugins/php/lib/php.jar!/stubs/standard/standard_4.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="286">
+          <caret line="55" column="56" lean-forward="true" selection-start-line="55" selection-start-column="56" selection-end-line="55" selection-end-column="56" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Bc/Validators/NotEmptyValidator.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="120">
+          <caret line="13" column="50" lean-forward="true" selection-start-line="13" selection-start-column="8" selection-end-line="13" selection-end-column="50" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Bc/Views/adresse/edit.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="30">
+          <caret line="2" column="22" selection-start-line="2" selection-start-column="22" selection-end-line="2" selection-end-column="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Bc/Controllers/AdresseController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="255">
+          <caret line="17" column="54" lean-forward="true" selection-start-line="17" selection-start-column="11" selection-end-line="17" selection-end-column="54" />
+          <folding>
+            <element signature="e#42#67#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lib/Home/FrontController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="575">
+          <caret line="78" column="34" lean-forward="true" selection-start-line="78" selection-start-column="34" selection-end-line="78" selection-end-column="34" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Bc/Controllers/ApiController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="225">
+          <caret line="20" column="64" selection-start-line="20" selection-start-column="64" selection-end-line="20" selection-end-column="64" />
+          <folding>
+            <element signature="e#148#181#0#PHP" expanded="true" />
           </folding>
         </state>
       </provider>

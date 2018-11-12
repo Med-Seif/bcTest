@@ -1,0 +1,20 @@
+{% extends 'layout.html.twig' %}
+{% block title %}
+    Liste des adresses
+{% endblock %} 
+{% block content %}
+    <table>
+        <thead>
+            <tr>
+                <th>Adresse</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        {% for item in adresses %}
+            <tr>
+                <td>{{ item.libelle }}</td>
+                <td><a href="{{ base_url }}/adresse/edit?id={{ item.id }}">Éditer</a></td>
+            </tr>
+        {% endfor %}
+    </table>
+{% endblock %}

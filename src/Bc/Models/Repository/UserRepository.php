@@ -23,13 +23,15 @@
             );
         }
 
-        public function userExists($userID)
+        public function authenticateUser($login, $mdp)
         {
-            $userRow = $this->findRow($userID);
-            if (!is_array($userRow)) {
-                return false;
-            }
-            return (count($userRow) > 0);
+            $query = 'SELECT id FROM users WHERE login = ? AND password = md5(?)';
+            $result = $this->getDbConnection()->executeQuery(
+                $query,
+                [$login, $mdp],
+                [\PDO::PARAM_STR, \PDO::PARAM_STR,]
+            );
+            return $result[0]['id'];
         }
 
     }

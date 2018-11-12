@@ -6,19 +6,22 @@
     <a href="{{ base_url }}/contact/add?userID={{ user_id }}">Ajouter</a>
     <table>
         <thead>
-            <tr>
-                <th>Nom</th>
-                <th>Prénom</th>
-                <th>Email</th>
-                <th>Actions</th>
-            </tr>
+        <tr>
+            <th>Nom</th>
+            <th>Prénom</th>
+            <th>Email</th>
+            <th>Actions</th>
+        </tr>
         </thead>
         {% for item in contacts %}
             <tr>
                 <td>{{ item.nom }}</td>
                 <td>{{ item.prenom }}</td>
                 <td>{{ item.email }}</td>
-                <td><a href="{{ base_url }}/contact/edit?id={{ item.id }}">Éditer</a></td>
+                <td>
+                    <a href="{{ base_url }}/contact/edit?id={{ item.id }}">Éditer</a>
+                    <a href="{{ base_url }}/adresse/list?contactID={{ item.id }}">Adresse(s)</a>
+                </td>
             </tr>
         {% endfor %}
     </table>

@@ -18,7 +18,7 @@
         {
             $userID = $this->getParam('userID');
             $userRepository = $this->get(\Bc\Models\Repository\UserRepository::class);
-            if (!$userRepository->userExists($userID)) {
+            if (!$userRepository->findRow($userID)) {
                 throw new \Bc\Exceptions\MissingObjectException();
             }
             $contactRepository = $this->get(ContactRepository::class);
@@ -29,7 +29,7 @@
         public function addAction()
         {
             $userID = $this->getParam('userID');
-            if (!$this->get(\Bc\Models\Repository\UserRepository::class)->userExists($userID)) {
+            if (!$this->get(\Bc\Models\Repository\UserRepository::class)->findRow($userID)) {
                 throw new \Bc\Exceptions\MissingObjectException();
             }
             if (!$this->hasParam('nom')) {

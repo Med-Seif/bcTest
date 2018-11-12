@@ -40,13 +40,5 @@
             $query = 'UPDATE contacts SET nom = ?, prenom = ?, email = ? WHERE id = ?';
             return $this->getDbConnection()->executeUpdate($query, $params);
         }
-
-        public function contactExists($id)
-        {
-            $userRow = $this->findRow($id);
-            if (!is_array($userRow)) {
-                return false;
-            }
-            return (count($userRow) > 0);
-        }
+        
     }
