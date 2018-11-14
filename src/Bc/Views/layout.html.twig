@@ -6,9 +6,13 @@
         <link rel="stylesheet" href="https://unpkg.com/purecss@1.0.0/build/pure-min.css" integrity="sha384-nn4HPE8lTHyVtfCBi5yW9d20FjT8BJwUXyWZT9InLYax14RDjBj46LmSztkmNP9w" crossorigin="anonymous">
     </head>
     <body>
-        <div id="content">
-            {% block content %}
-            {% endblock %}
+        <div class="pure-u-5-5"><a href="{{ base_url }}/user/logout">Se déconnecter</a></div>
+        <div class="pure-g">
+            <div class="pure-u-1-5"></div>
+            <div class="pure-u-3-5">
+                {% block content %}
+                {% endblock %}
+            </div>
         </div>
     </body>
 </html>

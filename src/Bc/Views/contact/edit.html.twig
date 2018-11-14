@@ -3,7 +3,7 @@
     Éditer un contact
 {% endblock %}
 {% block content %}
-    <form action="{{ base_url }}/contact/edit?id={{ id }}" method="post" name="action_edit" id="action_edit">
+    <form class="pure-form pure-form-stacked" action="{{ base_url }}/contact/edit?id={{ id }}" method="post" name="action_edit" id="action_edit">
         {% if formErrors %}
             <ul>
                 {% for error in formErrors %}
@@ -17,6 +17,6 @@
                                     value="{% if post.prenom is defined %} {{ post.prenom }} {% else %} {{ prenom }}{% endif %}"/>
         <label>Email</label><input name="email" type="text"
                                    value="{% if post.email is defined %}{{ post.email }}{% else %}{{ email }}{% endif %}"/>
-        <input type="submit" value="Soumettre"/>
+        <input class="pure-button pure-button-primary" type="submit" value="Soumettre"/>
     </form>
 {% endblock %}

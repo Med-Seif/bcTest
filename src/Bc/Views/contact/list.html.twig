@@ -3,8 +3,8 @@
     Liste de contacts
 {% endblock %} 
 {% block content %}
-    <a href="{{ base_url }}/contact/add?userID={{ user_id }}">Ajouter</a>
-    <table>
+    <a class="pure-button" href="{{ base_url }}/contact/add?userID={{ user_id }}">Ajouter</a>
+    <table class="pure-table">
         <thead>
         <tr>
             <th>Nom</th>
@@ -19,8 +19,8 @@
                 <td>{{ item.prenom }}</td>
                 <td>{{ item.email }}</td>
                 <td>
-                    <a href="{{ base_url }}/contact/edit?id={{ item.id }}">Éditer</a>
-                    <a href="{{ base_url }}/adresse/list?contactID={{ item.id }}">Adresse(s)</a>
+                    <a class="pure-button" href="{{ base_url }}/contact/edit?id={{ item.id }}">Éditer</a>
+                    <a class="pure-button" href="{{ base_url }}/adresse/list?contactID={{ item.id }}">Adresse(s)</a>
                 </td>
             </tr>
         {% endfor %}

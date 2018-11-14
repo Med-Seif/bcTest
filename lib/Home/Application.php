@@ -36,6 +36,7 @@
          */
         public function run()
         {
+            session_start();
             try {
                 $this->initRequest();
                 $this->initServices();

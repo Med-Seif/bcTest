@@ -3,7 +3,7 @@
     Liste des adresses
 {% endblock %} 
 {% block content %}
-    <table>
+    <table class="pure-table">
         <thead>
             <tr>
                 <th>Adresse</th>
@@ -13,7 +13,7 @@
         {% for item in adresses %}
             <tr>
                 <td>{{ item.libelle }}</td>
-                <td><a href="{{ base_url }}/adresse/edit?id={{ item.id }}">Éditer</a></td>
+                <td><a class="pure-button" href="{{ base_url }}/adresse/edit?id={{ item.id }}">Éditer</a></td>
             </tr>
         {% endfor %}
     </table>

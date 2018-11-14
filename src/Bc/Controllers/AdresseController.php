@@ -15,6 +15,7 @@
     {
         public function listAction()
         {
+            $this->checkAccess();
             $contactID = $this->getParam('contactID');
             $contactRepository = $this->get(\Bc\Models\Repository\ContactRepository::class);
             if (!$contactRepository->findRow($contactID)) {
@@ -31,6 +32,7 @@
          */
         public function editAction()
         {
+            $this->checkAccess();
             $id = $this->getParam('id');
             if (!$adresseRow = $this->get(AdresseRepository::class)->findRow($id)) {
                 throw new \Bc\Exceptions\MissingObjectException();

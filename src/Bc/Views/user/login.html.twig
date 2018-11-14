@@ -3,12 +3,12 @@
     Se connecter
 {% endblock %}
 {% block content %}
-    <form action="{{ base_url }}/user/login" method="post" name="action_login" id="action_login">
+    <form class="pure-form" action="{{ base_url }}/user/login" method="post" name="action_login" id="action_login">
         {% if msg %}
             <div>{{ msg }}</div>
         {% endif %}
-        <label>Login</label><input name="login" type="text" value="{{ post.login }}"/>
-        <label>Password</label><input name="mdp" type="password"/>
-        <input type="submit" value="Se connecter"/>
+        <input name="login" type="text" value="{{ post.login }}" placeholder="Login"/>
+        <input name="mdp" type="password" placeholder="Mot de passe"/>
+        <input class="pure-button pure-button-primary" type="submit" value="Se connecter"/>
     </form>
 {% endblock %}

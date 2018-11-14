@@ -13,10 +13,10 @@
      */
     class ContactController extends AbstractBaseController
     {
-
         public function listAction()
         {
-            $userID = $this->getParam('userID');
+            $user = $this->checkAccess();
+            $userID = $user['id'];
             $userRepository = $this->get(\Bc\Models\Repository\UserRepository::class);
             if (!$userRepository->findRow($userID)) {
                 throw new \Bc\Exceptions\MissingObjectException();
@@ -28,7 +28,8 @@
 
         public function addAction()
         {
-            $userID = $this->getParam('userID');
+            $user = $this->checkAccess();
+            $userID = $user['id'];
             if (!$this->get(\Bc\Models\Repository\UserRepository::class)->findRow($userID)) {
                 throw new \Bc\Exceptions\MissingObjectException();
             }
@@ -62,6 +63,7 @@
 
         public function editAction()
         {
+            $user = $this->checkAccess();
             $id = $this->getParam('id');
             if (!$contactRow = $this->get(ContactRepository::class)->findRow($id)) {
                 throw new \Bc\Exceptions\MissingObjectException();

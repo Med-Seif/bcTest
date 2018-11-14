@@ -3,7 +3,7 @@
     Éditer une adresse
 {% endblock %}
 {% block content %}
-    <form action="{{ base_url }}/adresse/edit?id={{ id }}" method="post" name="action_edit" id="action_edit">
+    <form class="pure-form pure-form-stacked" action="{{ base_url }}/adresse/edit?id={{ id }}" method="post" name="action_edit" id="action_edit">
         {% if formErrors %}
             <ul>
                 {% for error in formErrors %}
@@ -13,6 +13,6 @@
         {% endif %}
         <label>Libellé</label><input name="libelle" type="text"
                                  value="{% if post.libelle is defined %} {{ post.libelle }} {% else %} {{ libelle }}{% endif %}"/>
-        <input type="submit" value="Soumettre"/>
+        <input class="pure-button pure-button-primary" type="submit" value="Soumettre"/>
     </form>
 {% endblock %}
