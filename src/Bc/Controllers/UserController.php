@@ -6,7 +6,7 @@ use Bc\Forms\UserLoginForm;
 use Bc\Models\Repository\UserRepository;
 use Home\AbstractBaseController;
 use Home\AuthentificationSession;
-use Home\User;
+use Home\BcUser;
 
 /**
  * Description of UserController
@@ -32,7 +32,7 @@ class UserController extends AbstractBaseController
             );
             if ($id) {
                 // Authentification réussie
-                $user = new User();
+                $user = new BcUser();
                 $user->setId($id);
                 $user->setUsername($form->getValue('login'));
                 $authService = new AuthentificationSession();

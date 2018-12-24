@@ -24,7 +24,7 @@ class AuthentificationSession
         unset ($_SESSION[$this->namespace]);
     }
 
-    public function saveSession(User $user)
+    public function saveSession(BcUser $user)
     {
         $_SESSION[$this->namespace]['user'] = $user->extract();
     }
